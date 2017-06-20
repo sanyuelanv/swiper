@@ -64,14 +64,12 @@ class Swiper extends Component{
     let {startPapeX,endDist} = this.state
     let movePapeX = e.nativeEvent.touches[0].pageX
     let moveDist = endDist + (movePapeX - startPapeX)
-    console.log(moveDist);
     this.setState({moveDist})
   }
   _touchend(e){
     let {touchstart,endDist,moveDist} = this.state
     let startPapeX = 0
     endDist = moveDist
-    console.log(endDist);
     this.setState({touchstart:!touchstart,startPapeX,endDist})
   }
   render(){
